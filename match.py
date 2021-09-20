@@ -14,6 +14,7 @@ ITEMS_TAB = 'items'
 ITEMS_HEADER = 'name'
 MASTER_TAB = 'master'
 MASTER_HEADER = 'name'
+OUTPUTFILE = '/content/matched-data.csv'
 
 # Create ngrams
 def ngrams(string, n=3):
@@ -126,6 +127,6 @@ if __name__ == '__main__':
         matches.append(temp)
 
     matches = pd.DataFrame(matches, columns=['Original name','Matched name', 'Match confidence (lower is better)'])
-    matches.to_csv('matched-' + ITEMS_TAB + '.csv', index=False)
-    print('Output recorded in', 'matched-' + ITEMS_TAB + '.csv')
+    matches.to_csv(OUTPUTFILE, index=False)
+    print('Output recorded in', OUTPUTFILE)
     print('Done')
