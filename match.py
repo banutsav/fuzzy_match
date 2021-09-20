@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
 
 # INPUT FILE NAME
-INPUTFILE = 'data.xlsx'
+INPUTFILE = '/content/data.xlsx'
 ITEMS_TAB = 'items'
 ITEMS_HEADER = 'name'
 MASTER_TAB = 'master'
